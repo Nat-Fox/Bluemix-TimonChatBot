@@ -1,28 +1,41 @@
 .App {
   text-align: center;
+  margin-top: 50px;
+  overflow: scroll;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+.start {
+  position: fixed;
+  bottom: 15px;
+  display: none;
 }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
+.btn-send {
+  background-color: #4259E1;
+  color: #ffffff;
+  border: none;
 }
 
-.App-title {
-  font-size: 1.5em;
+.message-timon {
+  background-color: #4259E1;
+  color: #FFFFFF;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 10px 20px 10px 20px;
 }
 
-.App-intro {
-  font-size: large;
+.btn-action {
+    background-color: #FFFFFF;
+    color: #51DDAA;
+    border: 1px solid #51DDAA;
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.btn-action:hover {
+  background-color: #51DDAA;
+  color: #FFFFFF;
+  border: 1px solid transparent;
+}
+
+.btn-action:focus {
+  border: 1px solid transparent;
 }

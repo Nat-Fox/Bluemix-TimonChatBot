@@ -29,19 +29,21 @@ app.get('/', (req, res) => {
 
 app.post('/send-message', (req, res) => {
     console.info('parametros recibidos -> ', req.body);
-
-    // res.send(req.body);
+        
+    // llamada SDK node watson conversation
     conversation.message(
-        {
+        {        
           input: { text: req.body.message },
           workspace_id: 'cd43447a-4614-4144-9c06-e053882af1fe'
         },
         function(err, response) {
+          console.log('responsa', JSON.stringify(response, null, 4))
           if (err) {
             console.error(err);
           } else {
             res.send({
-                watson: response.output.text[0]
+              text: response.output.text,
+              context: response.context
             });
           }
         }
